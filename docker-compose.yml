@@ -18,9 +18,7 @@ services:
   php:
     build: ./php
     volumes:
-      - E:/docker/share/www:/www  
-    ports:
-      - "3306:3306"
+      - E:/docker/share/www:/www
   redis:
     build: ./redis
     ports: 

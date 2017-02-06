@@ -11,7 +11,6 @@ ARG MAX_ALLOWED_PACKET=200MB
 RUN apk update \
     && apk upgrade \
     && apk add bash \
-    && apk add openrc \
     && apk add mariadb mariadb-client \
 	&& mysql_install_db --user=mysql --datadir=/var/lib/mysql \
 	&& mv /usr/share/mysql/mysql.server /etc/init.d/mysql \
@@ -26,7 +25,6 @@ RUN apk update \
 	&& echo "GRANT ALL ON *.* TO ${MYSQL_USER}@'%';" >> /tmp/sql \
 	&& echo "DROP DATABASE test;" >> /tmp/sql \
 	&& echo "CREATE DATABASE ${MYSQL_DATABASE};" >> /tmp/sql \
-	&& cat /tmp/sql | mysql -u root --password=${MYSQL_ROOT_PASSWORD} \
-	&& rc-update add mariadb default
+	&& cat /tmp/sql | mysql -u root --password=${MYSQL_ROOT_PASSWORD}
 CMD ["mysqld", "--user=root"]
 EXPOSE 3306

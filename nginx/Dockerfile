@@ -5,13 +5,13 @@ MAINTAINER MANNV <man.nv@kayac.vn>
 ARG ARG_APP_ENV=dev
 
 COPY nginx.conf /etc/nginx/nginx.conf
-ADD conf.d /etc/nginx/conf.d
-ADD site-avaiable /etc/nginx/site-avaiable
+COPY conf.d /etc/nginx/conf.d
+COPY site-avaiable /etc/nginx/site-avaiable
 
 RUN apk update \
     && apk upgrade \
     && apk add bash \
-
+    && rm -f /etc/nginx/conf.d/default.conf \
     #install nginx
     && adduser -D -u 1000 -g 'www' www
 
