@@ -6,10 +6,10 @@ RUN apk update
 RUN apk upgrade 
 RUN apk add curl wget bash
 
-docker stop mydocker_mariadb_1
-docker rm mydocker_mariadb_1
-docker rmi mydocker_mariadb
-docker-compose up mariadb
+docker stop mydocker_nginx_1
+docker rm mydocker_nginx_1
+docker rmi mydocker_nginx
+docker-compose up nginx
 
 
 
