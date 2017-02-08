@@ -10,10 +10,10 @@ sử dụng docker format version 2
 - [Nginx](#nginx)
 - [PHP](#php)
 - [MariaDB](#mariadb)
-- [Redis](#Redis)
+- [Redis](#redis)
 - [Deployment](#deployment)
 - [Deployment on AWS ECS](#deployment-on-aws-ecs)
-
+- [Issue](https://github.com/mannv/docker/blob/master/issue.md)
 ## Nginx
 ```
 build: 
@@ -265,8 +265,13 @@ sử dụng lệnh sau để kiểm tra các container đã được tạo ra, t
 ```
 $ ecs-cli ps
 Name                                            State    Ports                     TaskDefinition
-340488e0-a307-4322-b41c-99f1b70e97f9/wordpress  RUNNING  52.89.204.137:80->80/tcp  ecscompose-docker-compose:2
-340488e0-a307-4322-b41c-99f1b70e97f9/mysql      RUNNING                            ecscompose-docker-compose:2
+ecs-cli ps
+Name                                             State    Ports                                                   TaskDefinition
+fccd314a-58a2-4d71-a031-36fc373278c8/mysql       RUNNING                                                          ecscompose-mydocker:16
+fccd314a-58a2-4d71-a031-36fc373278c8/redis       RUNNING  54.169.169.167:6389->6389/tcp                           ecscompose-mydocker:16
+fccd314a-58a2-4d71-a031-36fc373278c8/php         RUNNING                                                          ecscompose-mydocker:16
+fccd314a-58a2-4d71-a031-36fc373278c8/phpmyadmin  RUNNING  54.169.169.167:8080->80/tcp                             ecscompose-mydocker:16
+fccd314a-58a2-4d71-a031-36fc373278c8/nginx       RUNNING  54.169.169.167:443->443/tcp, 54.169.169.167:80->80/tcp  ecscompose-mydocker:16
 ```
 
 trong file nginx cấu hình code php chạy trong thư mục /www/public
