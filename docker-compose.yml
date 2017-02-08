@@ -19,6 +19,9 @@ services:
     build: ./php
     # volumes:
       # - E:/docker/share/www:/www
+    links:
+      - mysql
+      - redis
   redis:
     build: ./redis
     ports: 
@@ -31,6 +34,8 @@ services:
       MYSQL_USER: homestead
       MYSQL_PASSWORD: secret
       PMA_HOST: mariadb
+    links:
+      - mariadb
   mariadb:
     build: 
       context: ./mariadb
