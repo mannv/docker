@@ -8,8 +8,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    volumes:
-      - E:/docker/share/www:/www
+    # volumes:
+      # - E:/docker/share/www:/www
       # - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       # - ./nginx/conf.d:/etc/nginx/conf.d
       # - ./nginx/site-enable:/etc/nginx/site-enable      
@@ -17,8 +17,8 @@ services:
       - php  
   php:
     build: ./php
-    volumes:
-      - E:/docker/share/www:/www
+    # volumes:
+      # - E:/docker/share/www:/www
   redis:
     build: ./redis
     ports: 
@@ -35,7 +35,7 @@ services:
     build: 
       context: ./mariadb
       args:
-        MYSQL_DATABASE: db_homestead
+        MYSQL_DATABASE: homestead
         MYSQL_USER: homestead
         MYSQL_PASSWORD: secret
         MYSQL_ROOT_PASSWORD: root1234        

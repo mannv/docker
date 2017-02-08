@@ -23,6 +23,7 @@ RUN apk update \
 	&& echo "CREATE USER ${MYSQL_USER}@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';" >> /tmp/sql \
 	&& echo "GRANT ALL ON *.* TO ${MYSQL_USER}@'localhost';" >> /tmp/sql \
 	&& echo "GRANT ALL ON *.* TO ${MYSQL_USER}@'%';" >> /tmp/sql \
+	&& echo "FLUSH PRIVILEGES;" >> /tmp/sql \
 	&& echo "DROP DATABASE test;" >> /tmp/sql \
 	&& echo "CREATE DATABASE ${MYSQL_DATABASE};" >> /tmp/sql \
 	&& cat /tmp/sql | mysql -u root --password=${MYSQL_ROOT_PASSWORD}
