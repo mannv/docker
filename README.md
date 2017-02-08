@@ -265,8 +265,6 @@ chạy xong sẽ có 4 container được chạy trong CES nhưng chưa chạy �
 
 sử dụng lệnh sau để kiểm tra các container đã được tạo ra, truy cập vào địa chỉ IP hoặc domain để kiểm tra kết quả
 ```
-$ ecs-cli ps
-Name                                            State    Ports                     TaskDefinition
 ecs-cli ps
 Name                                             State    Ports                                                   TaskDefinition
 fccd314a-58a2-4d71-a031-36fc373278c8/mysql       RUNNING                                                          ecscompose-mydocker:16
