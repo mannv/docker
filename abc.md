@@ -1534,38 +1534,7 @@ Request method: **POST**
 |app_start_date|any||✓|eg: |
 |android_imei|any||✓|eg: |
 |system_language|any||✓|eg: English|
-|error_log|any||✓|eg: -1361984544|:1.0.2|:Vostro 3650 (Dell Inc.)|:1486981574|:Error|:Assert > L10n : Key not found. ["Loi roi："]|:UnityEngine.Debug:LogError(Object)
-UnityDebug:Assert(Boolean, String) (at Assets/Share/Scripts/Common/DebugUtil/UnityDebug.cs:16)
-L10n:GetImpl(String) (at Assets/Share/Scripts/Common/L10n.cs:37)
-L10n:Get(String) (at Assets/Share/Scripts/Common/L10n.cs:25)
-DownloadError:Awake() (at Assets/Share/Scripts/Common/Dialog/Download/DownloadError.cs:13)
-UnityEngine.Object:Instantiate(Object)
-DialogController:Open(GameObject, String, Boolean) (at Assets/Share/Scripts/Common/DialogController.cs:54)
-DownloadController:ErrorEnter() (at Assets/Share/Scripts/Download/DownloadController.cs:74)
-StateMachine`1:Update() (at Assets/Share/Scripts/Game/System/StateMachine.cs:44)
-DownloadController:Update() (at Assets/Share/Scripts/Download/DownloadController.cs:27)
-|:1486981574|:Error|:Assert > L10n : Key not found. ["vai ca nong"]|:UnityEngine.Debug:LogError(Object)
-UnityDebug:Assert(Boolean, String) (at Assets/Share/Scripts/Common/DebugUtil/UnityDebug.cs:16)
-L10n:GetImpl(String) (at Assets/Share/Scripts/Common/L10n.cs:37)
-L10n:Get(String) (at Assets/Share/Scripts/Common/L10n.cs:25)
-DownloadError:Awake() (at Assets/Share/Scripts/Common/Dialog/Download/DownloadError.cs:14)
-UnityEngine.Object:Instantiate(Object)
-DialogController:Open(GameObject, String, Boolean) (at Assets/Share/Scripts/Common/DialogController.cs:54)
-DownloadController:ErrorEnter() (at Assets/Share/Scripts/Download/DownloadController.cs:74)
-StateMachine`1:Update() (at Assets/Share/Scripts/Game/System/StateMachine.cs:44)
-DownloadController:Update() (at Assets/Share/Scripts/Download/DownloadController.cs:27)
-|:1486981965|:Error|:Assert > L10n : Key not found. ["※なまえを決め直したいときは
-「もどる」を押すんだゾ！"]|:UnityEngine.Debug:LogError(Object)
-UnityDebug:Assert(Boolean, String) (at Assets/Share/Scripts/Common/DebugUtil/UnityDebug.cs:16)
-L10n:GetImpl(String) (at Assets/Share/Scripts/Common/L10n.cs:37)
-L10n:Get(String) (at Assets/Share/Scripts/Common/L10n.cs:25)
-UserRegistConfirm:Awake() (at Assets/Share/Scripts/UserRegist/UserRegistConfirm.cs:25)
-UnityEngine.Object:Instantiate(Object)
-DialogController:Open(GameObject, String, Boolean) (at Assets/Share/Scripts/Common/DialogController.cs:54)
-UserRegistController:OpenConfirm(String) (at Assets/Share/Scripts/UserRegist/UserRegistController.cs:197)
-<Load>c__IteratorD3:MoveNext() (at Assets/Share/Scripts/UserRegist/UserRegistController.cs:191)
-UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
-|
+|error_log|any||✓|eg: -1361984544|:1.0.2|:Vostro 3650 (Dell Inc.)|
 |android_iccid|any||✓|eg: |
 |device_type|any||✓|eg: 0|
 |app_language|any||✓|eg: 2|
