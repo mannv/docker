@@ -234,7 +234,7 @@ reference: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_in
 reference: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI_Configuration.html
 VD:
 ```
-ecs-cli configure --region ap-southeast-1 --access-key AKIAIBRDF3Z5YVBNHN4Q --secret-key L+4OQpffNG55bj+yEmcIxGr3HvcycsAbIQjrHW1V --cluster demo-web
+ecs-cli configure --region ap-southeast-1 --access-key your-access-key --secret-key your-secret-key --cluster demo-web
 ```
 cluster demo-web sẽ được tạo ra khi thự hiện xong step 3
 
